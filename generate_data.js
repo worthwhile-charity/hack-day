@@ -1,10 +1,7 @@
 // Load any environment variables first
 require('env2')('./.env');
 const insert = require('./lib/db/insert');
-const genFakeJob = require('./lib/gen_fake_job');
-
-const fakeJobs =
-  Array.from({ length: 50 }, genFakeJob);
+const fakeJobs = require('./lib/gen_fake_job')(50); // number of fake jobs
 
 insert('jobMatches', fakeJobs)
   .then(res => console.log('SUCCESS: ', res)) // eslint-disable-line
