@@ -17,6 +17,7 @@ const routes = require('./routes');
 
 const dbManager = require('./lib/db_manager');
 
+
 dbManager
 .then((db) => {
   console.log(db._state);  // eslint-disable-line

@@ -3,15 +3,129 @@
   <head>
     <meta charset="utf-8">
     <title>insights_intake</title>
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
 
+    <div class="containers">
+      <div class="row">
+        <div class="col s12 title">
+          Employer
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row">
+          <div class="input-field col s12">
+             <i class="material-icons prefix">account_circle</i>
+            <input id="email" type="email" class="validate">
+            <label for="email">Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">phone</i>
+            <input id="email" type="email" class="validate">
+            <label for="email">Co. Number</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">home</i>
+            <input id="email" type="email" class="validate">
+            <label for="email">Address</label>
+          </div>
+        </div>
+      </div>
+      <div class="row col s12">
+        <div class="button">
+          <a class="waves-effect waves-light btn-large">button</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="containers">
+      <div class="row">
+        <div class="col s12 title">
+          Candidate
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="email" type="email" class="validate">
+
+            <label for="email">Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">home</i>
+            <input id="email" type="email" class="validate">
+
+            <label for="email">Address</label>
+          </div>
+        </div>
+      </div>
+      <div class="button">
+        <a class="waves-effect waves-light btn-large">button</a>
+      </div>
+    </div>
+
+    <div class="containers">
+      <div class="row">
+        <div class="col s12 title">
+          Employer
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">&#xE869;</i>
+            <input id="email" type="email" class="validate">
+            <label for="email">Title</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">perm_contact_calendar</i>
+            <label for="email">Start Date</label>
+             <input type="date" class="datepicker">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">perm_contact_calendar</i>
+            <label for="email">Start Date</label>
+             <input type="date" class="datepicker">
+          </div>
+        </div>
+      <div class="button">
+        <a class="waves-effect waves-light btn-large">button</a>
+      </div>
+    </div>
 
 
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script>
+    $('.datepicker').pickadate({
+      selectMonths: true, // Creates a dropdown to control month
+      selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
+    $('.datepicker').pickadate({
+      selectMonths: true, // Creates a dropdown to control month
+      selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
+    </script>
+
+    </script>
   </body>
 </html>

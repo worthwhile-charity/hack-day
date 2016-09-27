@@ -1,25 +1,26 @@
 // Load any environment variables first
 require('env2')('./.env');
+const faker = require('faker');
 const insertOrUpdate = require('./lib/insert_or_update');
 
 const data = {
-  jobMatchId: 'a-unique-id',
+  jobMatchId: faker.random.uuid(),
   employer: {
-    name: 'Charity Number 1000',
-    companyNo: '123456',
-    address: '36 Dunoon Road, London SE23 3TF',
+    name: faker.name.findName(),
+    companyNo: faker.random.number(),
+    address: faker.address.streetAddress(),
   },
   employee: {
-    name: 'Matt Glover',
-    address: '3a Highgate West Hill, London N6 6NJ',
+    name: faker.name.findName(),
+    address: faker.address.streetAddress(),
   },
   job: {
-    title: 'Junior Developer',
-    startDate: '01/10/16',
-    endDate: '30/09/17',
+    title: faker.random.words(),
+    startDate: faker.date.future(),
+    endDate: faker.date.future(),
   },
 };
 
 insertOrUpdate('jobMatches', data, ['jobMatchId'])
-.then(res => console.log('SUCCESS: ', res)) // eslint-disable-line
-.catch(err => console.log('ERROR: ', err)); // eslint-disable-line
+  .then(res => console.log('SUCCESS: ', res)) // eslint-disable-line
+  .catch(err => console.log('ERROR: ', err)); // eslint-disable-line
