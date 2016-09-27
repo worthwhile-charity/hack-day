@@ -3,14 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>insights_intake</title>
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
-
-
+    <div class="header">
+      <img class="logo" src="images/worthwhile_logo_white.png">
+    </div>
+    <div class="tabs">
+      <ul "tab-options">
+        <li><a id="tab-details"href="#">Details</a></li>
+        <li><a id="tab-invoice" href="#">Invoice</a></li>
+        <li><a id="tab-contract" href="#">Contract</a></li>
+      </ul>
+    </div>
+    <div class="active" id="details">Details</div>
+    <div id="invoice">Invoice</div>
+    <div id="contract">Contract</div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script>
+      var details = document.getElementById('tab-details');
+      var invoice = document.getElementById('tab-invoice');
+      var contract = document.getElementById('tab-contract');
+      var detailsText = document.getElementById('details');
+      var invoiceText = document.getElementById('invoice');
+      var contractText = document.getElementById('contract');
+      var tabs = [[details, detailsText], [invoice, invoiceText], [contract, contractText]];
+
+      function tabBetweenOptions(target) {
+        detailsText.className = "";
+        invoiceText.className = "";
+        contractText.className = "";
+        target.className = "active";
+      }
+
+      tabs.forEach((el) => el[0].addEventListener('click', () => { tabBetweenOptions(el[1]) }));
+    </script>
   </body>
 </html>
