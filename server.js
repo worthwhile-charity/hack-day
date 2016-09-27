@@ -15,7 +15,7 @@ const { logStartup, logUnhandledError } = require('./loggers');
 const plugins = require('./plugins');
 const routes = require('./routes');
 
-const dbManager = require('./lib/db_manager');
+const dbManager = require('./lib/db/db_manager');
 
 
 dbManager
