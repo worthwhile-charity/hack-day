@@ -1,26 +1,8 @@
 // Load any environment variables first
 require('env2')('./.env');
-const faker = require('faker');
-const insertOrUpdate = require('./lib/insert_or_update');
+const insert = require('./lib/db/insert');
+const fakeJobs = require('./lib/gen_fake_job')(50); // number of fake jobs
 
-const data = {
-  jobMatchId: faker.random.uuid(),
-  employer: {
-    name: faker.name.findName(),
-    companyNo: faker.random.number(),
-    address: faker.address.streetAddress(),
-  },
-  employee: {
-    name: faker.name.findName(),
-    address: faker.address.streetAddress(),
-  },
-  job: {
-    title: faker.random.words(),
-    startDate: faker.date.future(),
-    endDate: faker.date.future(),
-  },
-};
-
-insertOrUpdate('jobMatches', data, ['jobMatchId'])
+insert('jobMatches', fakeJobs)
   .then(res => console.log('SUCCESS: ', res)) // eslint-disable-line
   .catch(err => console.log('ERROR: ', err)); // eslint-disable-line
