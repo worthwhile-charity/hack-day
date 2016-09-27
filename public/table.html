@@ -3,15 +3,69 @@
   <head>
     <meta charset="utf-8">
     <title>insights_intake</title>
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
 
+    <div id='container'>
 
+      <a class='dropdown-button btn' href='#' data-activates='dropdown1' id='filter_by'>Filter By</a>
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!">In Progress</a></li>
+        <li><a href="#!">To Be Issued</a></li>
+        <li><a href="#!">Rejected</a></li>
+        <li><a href="#!">Undecided</a></li>
+      </ul>
 
+      <table id='table'>
+        <tr>
+          <th>Employer</th>
+          <th>Candidate</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+
+        <tr>
+          <td>Tesla</td>
+          <td>cand a</td>
+          <td>28/09/2017</td>
+          <td>In Progress</td>
+        </tr>
+
+        <tr>
+          <td>Tesla</td>
+          <td>cand b</td>
+          <td>28/09/2017</td>
+          <td>Rejected</td>
+        </tr>
+
+        <tr>
+          <td>Tesla</td>
+          <td>cand c</td>
+          <td>28/09/2017</td>
+          <td>To Be Issued</td>
+        </tr>
+
+        <tr>
+          <td>Tesla</td>
+          <td>cand d</td>
+          <td>28/09/2017</td>
+          <td>Undecided</td>
+        </tr>
+
+        <tr>
+          <td>Tesla</td>
+          <td>cand e</td>
+          <td>28/09/2017</td>
+          <td>In Progress</td>
+        </tr>
+      </table>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   </body>
 </html>

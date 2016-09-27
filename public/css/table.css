@@ -1,0 +1,43 @@
+body {
+  margin: 0px;
+}
+
+#container {
+  width: 90%;
+  margin: auto;
+}
+
+
+
+#filter_by {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: right;
+}
+
+#dropdown1 {
+  margin-top: 10px;
+  float: right;
+}
+
+table {
+  width: 100%;
+  margin-top: 10px;
+}
+
+th {
+  background-color: #ff4d4d;
+}
+
+table, th, td {
+  padding: 10px;
+  border-radius: 0px;
+}
+
+tr:nth-child(even) {
+  background-color: #99ff99;
+}
+
+tr:nth-child(odd) {
+  background-color: #ccffcc;
+}
