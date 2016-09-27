@@ -9,9 +9,15 @@
   margin-bottom: 10px;
   margin-left: 25px;
   font-size: 30px;
+  font-weight: 600;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 .button {
   float: right;
   margin-right: .5em;
+}
+
+.btn-large {
+  font-size: 17px;
 }

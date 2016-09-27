@@ -26,7 +26,9 @@ table {
 }
 
 th {
-  background-color: #ff4d4d;
+  background-color: #A9F5F2;
+  font-size: 22px;
+  font-family: "Lucide Sans Unicode"
 }
 
 table, th, td {
@@ -35,9 +37,15 @@ table, th, td {
 }
 
 tr:nth-child(even) {
-  background-color: #99ff99;
+  background-color: #FAFAFA;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Lucide Sans Unicode"
 }
 
 tr:nth-child(odd) {
-  background-color: #ccffcc;
+  background-color: #F2F2F2;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Lucide Sans Unicode"
 }
