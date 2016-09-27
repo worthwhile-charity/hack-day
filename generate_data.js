@@ -9,15 +9,15 @@ const data = {
     companyNo: '123456',
     address: '36 Dunoon Road, London SE23 3TF',
   },
-  // employee: {
-  //   name: 'Matt Glover',
-  //   address: '3a Highgate West Hill, London N6 6NJ',
-  // },
-  // job: {
-  //   title: 'Junior Developer',
-  //   startDate: '01/10/16',
-  //   endDate: '30/09/17',
-  // },
+  employee: {
+    name: 'Matt Glover',
+    address: '3a Highgate West Hill, London N6 6NJ',
+  },
+  job: {
+    title: 'Junior Developer',
+    startDate: '01/10/16',
+    endDate: '30/09/17',
+  },
 };
 
 insertOrUpdate('jobMatches', data, ['jobMatchId'])
