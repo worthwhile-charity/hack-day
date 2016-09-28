@@ -1,23 +1,29 @@
-body {
-  margin: 0px;
-}
-
 #container {
   width: 90%;
   margin: auto;
 }
 
-
-
 #filter_by {
+  margin-right: 2.5vw; 
   margin-top: 10px;
   margin-bottom: 10px;
+  font-size: 18px !important;
+  font-weight: 500 !important;
   float: right;
+  background-color: #0075b2;
+}
+
+#filter_by:hover {
+  opacity: 0.7;
 }
 
 #dropdown1 {
   margin-top: 10px;
   float: right;
+}
+
+.dropdown-content li a{
+  color: black;
 }
 
 table {
@@ -26,9 +32,9 @@ table {
 }
 
 th {
-  background-color: #A9F5F2;
+  background-color: #29b6f6;
   font-size: 22px;
-  font-family: "Lucide Sans Unicode"
+  color: white;
 }
 
 table, th, td {
@@ -37,16 +43,19 @@ table, th, td {
   text-align: center;
 }
 
+.view {
+  background-color: #0075b2 !important;
+  font-weight: normal !important;
+}
+
 tr:nth-child(even) {
   background-color: #FAFAFA;
   font-size: 18px;
   font-weight: 500;
-  font-family: "Lucide Sans Unicode"
 }
 
 tr:nth-child(odd) {
-  background-color: #F2F2F2;
+  background-color: #e0e0e0;
   font-size: 18px;
   font-weight: 500;
-  font-family: "Lucide Sans Unicode"
 }

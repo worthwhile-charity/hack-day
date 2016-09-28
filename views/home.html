@@ -1,9 +1,29 @@
-<h1>hello {{me}}</h1>
+<a class='dropdown-button btn' href='#' data-activates='dropdown1' id='filter_by'>Filter By</a>
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!">In Progress</a></li>
+        <li><a href="#!">To Be Issued</a></li>
+        <li><a href="#!">Rejected</a></li>
+        <li><a href="#!">Undecided</a></li>
+      </ul>
 
-<ul>
-  {{#each items}}
-    <li>{{this}}</li>
-  {{/each}}
-</ul>
+<table id='table'>
+  <table id='table'>
+    <tr>
+      <th>Employer</th>
+      <th>Candidate</th>
+      <th>Date</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
 
-{{> footer}}
+    {{#each items}}
+    <tr>
+      <td>{{this.employerName}}</td>
+      <td>{{this.employeeName}}</td>
+      <td>28-09-2017</td>
+      <td>{{this}}In Progress</td>
+      <td><a class="waves-effect waves-light btn view" href='layout-2?id={{this.jobId}}'>VIEW</a></td>
+          {{/each}}
+    </tr>
+
+
