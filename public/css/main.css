@@ -9,12 +9,27 @@
   margin-left: 2vw;
 }
 
-li {
+.tabs {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  width: 25%;
+}
+
+.tabs li {
   display: inline-block;
+  margin-left: 1.7vw;
+  font-size: 17px;
+}
+
+.tabs a:hover {
+  color: #7ADEFF !important;
 }
 
 .active {
   display: block !important;
+}
+
+.active-tab {
+  border-bottom: 1px solid #7ADEFF;
 }
 
 #details {
