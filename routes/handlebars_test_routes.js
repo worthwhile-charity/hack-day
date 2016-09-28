@@ -26,8 +26,7 @@ const layout2 = {
       console.log(res);
       const view = 'away';
       const context = { me: 'Matt', items: res };
-      const layout = 'layout_2';
-      reply.view(view, context, { layout });
+      reply.view(view, context);
     });
   },
 };
