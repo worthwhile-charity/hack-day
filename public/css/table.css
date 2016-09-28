@@ -7,17 +7,24 @@ body {
   margin: auto;
 }
 
-
-
 #filter_by {
   margin-top: 10px;
   margin-bottom: 10px;
   float: right;
+  background-color: #3385ff;
+}
+
+#filter_by:hover {
+  opacity: 0.7;
 }
 
 #dropdown1 {
   margin-top: 10px;
   float: right;
+}
+
+.dropdown-content li a{
+  color: black;
 }
 
 table {
@@ -26,9 +33,9 @@ table {
 }
 
 th {
-  background-color: #A9F5F2;
+  background-color: black;
   font-size: 22px;
-  font-family: "Lucide Sans Unicode"
+  color: white;
 }
 
 table, th, td {
@@ -41,12 +48,10 @@ tr:nth-child(even) {
   background-color: #FAFAFA;
   font-size: 18px;
   font-weight: 500;
-  font-family: "Lucide Sans Unicode"
 }
 
 tr:nth-child(odd) {
   background-color: #F2F2F2;
   font-size: 18px;
   font-weight: 500;
-  font-family: "Lucide Sans Unicode"
 }
