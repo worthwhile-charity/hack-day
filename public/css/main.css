@@ -1,3 +1,7 @@
+.body {
+  border-left: 40px solid red;
+}
+
 .header {
   height: 10%;
   width: 100%;
