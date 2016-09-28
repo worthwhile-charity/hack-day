@@ -14,9 +14,9 @@
     </div>
     <div class="tabs">
       <ul "tab-options">
-        <li><a id="tab-details"href="#">Details</a></li>
-        <li><a id="tab-invoice" href="#">Invoice</a></li>
-        <li><a id="tab-contract" href="#">Contract</a></li>
+        <li><a class="active-tab" id="tab-details"href="#">DETAILS</a></li>
+        <li><a id="tab-invoice" href="#">INVOICE</a></li>
+        <li><a id="tab-contract" href="#">CONTRACT</a></li>
       </ul>
     </div>
     <div class="active" id="details">Details</div>
@@ -25,22 +25,22 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script>
-      var details = document.getElementById('tab-details');
-      var invoice = document.getElementById('tab-invoice');
-      var contract = document.getElementById('tab-contract');
-      var detailsText = document.getElementById('details');
-      var invoiceText = document.getElementById('invoice');
-      var contractText = document.getElementById('contract');
-      var tabs = [[details, detailsText], [invoice, invoiceText], [contract, contractText]];
+      var tabsData = [[document.getElementById('tab-details'), document.getElementById('details')],
+                      [document.getElementById('tab-invoice'), document.getElementById('invoice')],
+                      [document.getElementById('tab-contract'), document.getElementById('contract')]];
 
-      function tabBetweenOptions(target) {
-        detailsText.className = "";
-        invoiceText.className = "";
-        contractText.className = "";
-        target.className = "active";
+      function tabBetweenOptions(targetTab, targetText) {
+        tabsData.forEach((el) => {
+          el.forEach((item) => {
+            item.className = "";
+          });
+        });
+
+        targetTab.className = "active-tab";
+        targetText.className = "active";
       }
 
-      tabs.forEach((el) => el[0].addEventListener('click', () => { tabBetweenOptions(el[1]) }));
+      tabsData.forEach((el) => el[0].addEventListener('click', () => { tabBetweenOptions(el[0], el[1]) }));
     </script>
   </body>
 </html>
