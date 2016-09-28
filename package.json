@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon server",
     "lint": "eslint './**/*.js'",
-    "test": "ava",
+    "test": "NODE_ENV=testing ava --serial",
     "precommit": "npm run lint && npm test"
   },
   "repository": {
@@ -36,7 +36,7 @@
     "env2": "^2.1.1",
     "faker": "^3.1.0",
     "handlebars": "^4.0.5",
-    "monk": "^3.1.2",
+    "mongoose": "^4.6.1",
     "ramda": "^0.22.1",
     "vision": "^4.1.0"
   }
