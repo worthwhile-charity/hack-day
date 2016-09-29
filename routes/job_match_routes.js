@@ -2,7 +2,6 @@ const { evolve } = require('ramda');
 const moment = require('moment');
 const Job = require('../lib/job');
 
-
 const formatDate = date =>
   moment(date).format('DD-MM-YYYY');
 
@@ -44,9 +43,23 @@ const contractRoute = {
   },
 };
 
+const collectForm = {
+  method: 'POST',
+  path: '/collectForm',
+  handler(req, reply) {
+    console.log(req.payload);
+    Job.findOneAndUpdate({ jobId: req.payload.jobId }, req.payload, (err, job) => {
+      if (err)console.log(err);
+      console.log(job);
+      reply.view('job', job);
+    });
+  },
+};
+
 module.exports = [
   homeRoute,
   viewRoute,
   invoiceRoute,
   contractRoute,
+  collectForm,
 ];
