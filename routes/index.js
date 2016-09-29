@@ -1,6 +1,3 @@
-const { layout1, layout2 } = require('./handlebars_test_routes');
+const jobMatchRoutes = require('./job_match_routes');
 
-module.exports = [
-  layout1,
-  layout2,
-];
+module.exports = [...jobMatchRoutes];
