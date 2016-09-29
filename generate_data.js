@@ -1,8 +1,12 @@
 // Load any environment variables first
 require('env2')('./.env');
-const insert = require('./lib/db/insert');
-const fakeJobs = require('./lib/gen_fake_job')(50); // number of fake jobs
+// const createJob = require('./lib/jobs/create_job');
+const Job = require('./lib/job');
+const fakeJobs = require('./lib/fake_jobs')(50); // number of fake jobs
+const dbConnect = require('./lib/db_connect');
 
-insert('jobMatches', fakeJobs)
-  .then(res => console.log('SUCCESS: ', res)) // eslint-disable-line
-  .catch(err => console.log('ERROR: ', err)); // eslint-disable-line
+dbConnect();
+
+Job.create(fakeJobs)
+  .then(res => console.log('SUCCESS')) // eslint-disable-line
+  .catch(err => console.log('ERROR')); // eslint-disable-line

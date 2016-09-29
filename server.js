@@ -1,5 +1,8 @@
 // Load any environment variables first
 require('env2')('./.env');
+const dbConnect = require('./lib/db_connect');
+
+dbConnect();
 
 const {
   createServer,
@@ -14,17 +17,6 @@ const configureHandlebars = require('./configure_handlebars');
 const { logStartup, logUnhandledError } = require('./loggers');
 const plugins = require('./plugins');
 const routes = require('./routes');
-
-const dbManager = require('./lib/db/db_manager');
-
-
-dbManager
-.then((db) => {
-  console.log(db._state);  // eslint-disable-line
-})
-.catch((err) => {
-  console.log(err);  // eslint-disable-line no-console
-});
 
 createServer()
 .then(setConnection(connectionOptions))
