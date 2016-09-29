@@ -35,8 +35,18 @@ const invoiceRoute = {
   },
 };
 
+const contractRoute = {
+  method: 'GET',
+  path: '/contract',
+  handler(req, reply) {
+    const jobId = req.url.query.id;
+    Job.findOne({ jobId }).then(job => { console.log(job); reply.view('contract', job); });
+  },
+};
+
 module.exports = [
   homeRoute,
   viewRoute,
   invoiceRoute,
+  contractRoute,
 ];
