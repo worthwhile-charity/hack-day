@@ -40,7 +40,7 @@ const contractRoute = {
   path: '/contract',
   handler(req, reply) {
     const jobId = req.url.query.id;
-    Job.findOne({ jobId }).then(job => { console.log(job); reply.view('contract', job); });
+    Job.findOne({ jobId }).then(job => reply.view('contract', job));
   },
 };
 
