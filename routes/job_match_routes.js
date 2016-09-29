@@ -26,7 +26,17 @@ const viewRoute = {
   },
 };
 
+const invoiceRoute = {
+  method: 'GET',
+  path: '/invoice',
+  handler(req, reply) {
+    const jobId = req.url.query.id;
+    Job.findOne({ jobId }).then(job => reply.view('invoice', job));
+  },
+};
+
 module.exports = [
   homeRoute,
   viewRoute,
+  invoiceRoute,
 ];
