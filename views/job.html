@@ -5,7 +5,7 @@
     Employer
   </div>
 </div>
-<form action='/collectForm' method='post' >
+<form action='/update-job' method='post' >
 <div class="row">
   <div class="row">
     <div class="input-field col s12">
@@ -74,20 +74,20 @@
     <div class="input-field col s12">
       <i class="material-icons prefix">perm_contact_calendar</i>
       <label for="jobStartDate">Start Date</label>
-      <input id="jobStartDate" name="jobStartDate" type="date" class="datepicker" value="{{jobStartDate}}">
+      <input id="jobStartDate" name="jobStartDate" type="date" class="datepicker" data-value="{{jobStartDate}}">
     </div>
   </div>
   <div class="row">
     <div class="input-field col s12">
       <i class="material-icons prefix">perm_contact_calendar</i>
       <label for="jobEndDate">End Date</label>
-      <input id="jobEndDate" name="jobEndDate" type="date" class="datepicker" value="{{jobEndDate}}">
+      <input id="jobEndDate" name="jobEndDate" type="date" class="datepicker" data-value="{{jobEndDate}}">
     </div>
   </div>
-  <div class="button">
-    <a class="waves-effect waves-light btn-large">Submit</a>
-  </div>
-  <input id="" name='' value="{{}}" type="hidden" >
+  <button class="waves-effect waves-light btn-large">Submit</a>
+  <input id="jobId" name="jobId" value="{{jobId}}" type="hidden" >
+  <input id="_id" name="_id" value="{{_id}}" type="hidden" >
+  <input id="jobStatus" name="jobStatus" value="{{jobStatus}}" type="hidden" >
   </form>
 </div>
 
@@ -96,12 +96,17 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 <script>
-  $('#jobStartDate').pickadate({
+  $('#jobStartDate')
+  .pickadate({
     selectMonths: true, // Creates a dropdown to control month
-    selectYears: 15 // Creates a dropdown of 15 years to control year
+    selectYears: 15, // Creates a dropdown of 15 years to control year
+    format: 'dd-mm-yyyy'
   });
-  $('#jobEndDate').pickadate({
+
+  $('#jobEndDate')
+  .pickadate({
     selectMonths: true, // Creates a dropdown to control month
-    selectYears: 15 // Creates a dropdown of 15 years to control year
+    selectYears: 15, // Creates a dropdown of 15 years to control year
+    format: 'dd-mm-yyyy'
   });
 </script>
