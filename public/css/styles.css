@@ -1,6 +1,7 @@
 @import url('main.css');
 @import url('table.css');
 @import url('view.css');
+@import url('invoice.css');
 
 body {
   background-color: #f2f2f2;
