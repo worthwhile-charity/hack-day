@@ -10,7 +10,7 @@ const homeRoute = {
 
 const viewRoute = {
   method: 'GET',
-  path: '/job-match',
+  path: '/job',
   handler(req, reply) {
     const jobId = req.url.query.id;
     Job.findOne({ jobId }).then(job => reply.view('away', job));
