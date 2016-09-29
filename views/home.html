@@ -7,7 +7,6 @@
       </ul>
 
 <table id='table'>
-  <table id='table'>
     <tr>
       <th>Employer</th>
       <th>Candidate</th>
@@ -21,7 +20,8 @@
       <td>{{this.employerName}}</td>
       <td>{{this.employeeName}}</td>
       <td>28-09-2017</td>
-      <td>{{this.jobStatus}}</td>
-      <td><a class="waves-effect waves-light btn view" href='layout-2?id={{this.jobId}}'>VIEW</a></td>
+      <td>{{#ifJobStatus this.jobStatus}}{{/ifJobStatus}}</td>
+      <td><a class="waves-effect waves-light btn view" href='/job?id={{this.jobId}}'>VIEW</a></td>
           {{/each}}
     </tr>
+</table>
