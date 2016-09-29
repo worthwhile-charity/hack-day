@@ -1,6 +1,6 @@
 const Handlebars = require('handlebars');
 
-Handlebars.registerHelper('ifJobStatus', function (jobStatus) {
+Handlebars.registerHelper('ifJobStatus', (jobStatus) => {
   if (jobStatus === 'to_issue') {
     return 'To Be Issued';
   }
