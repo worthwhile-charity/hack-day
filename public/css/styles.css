@@ -2,6 +2,7 @@
 @import url('table.css');
 @import url('view.css');
 @import url('invoice.css');
+@import url('contract.css');
 
 body {
   background-color: #f2f2f2;
