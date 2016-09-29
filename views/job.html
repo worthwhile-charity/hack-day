@@ -1,112 +1,112 @@
 {{> tabs}}
 <div class="containers">
-  <div class="row">
-    <div class="col s12 title">
-      Employer
-    </div>
-  </div>
-  <div class="row">
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons prefix">account_circle</i>
-        <input id="employerName" name="employerName" type="text" class="validate" value="{{employerName}}">
-        <label for="employerName">Name</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons prefix">phone</i>
-        <input id="employerCoNo" name="employerCoNo" type="text" class="validate" value="{{employerCoNo}}">
-        <label for="employerCoNo">Number</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons prefix">home</i>
-        <input id="employerAddress" name="employerAddress" type="text" class="validate" value="{{employerAddress}}">
-        <label for="employerAddress">Address</label>
-        <!-- <input id="email" type="email" class="validate" value="{{employerAddress}}">
-        <label for="email">Address</label>
-        <input id="email" type="email" class="validate">
-        <label for="email">Address</label> -->
-      </div>
-    </div>
+<div class="row">
+  <div class="col s12 title">
+    Employer
   </div>
 </div>
-
-<div class="containers">
+<form action='/update-job' method='post' >
+<div class="row">
   <div class="row">
-    <div class="col s12 title">
-      Employee
+    <div class="input-field col s12">
+      <i class="material-icons prefix">account_circle</i>
+      <input id="employerName" name="employerName" type="text" class="validate" value="{{employerName}}">
+      <label for="employerName">Name</label>
     </div>
   </div>
-
   <div class="row">
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons prefix">account_circle</i>
-        <input id="employeeName" name="employeeName" type="text" class="validate" value="{{employeeName}}">
-
-        <label for="employeeName">Name</label>
-      </div>
+    <div class="input-field col s12">
+      <i class="material-icons prefix">phone</i>
+      <input id="employerCoNo" name="employerCoNo" type="text" class="validate" value="{{employerCoNo}}">
+      <label for="employerCoNo">Number</label>
     </div>
+  </div>
+  <div class="row">
     <div class="input-field col s12">
       <i class="material-icons prefix">home</i>
-      <input id="employeeAddress" name="employeeAddress" type="text" class="validate" value="{{employeeAddress}}">
-      <label for="employeeAddress">Address</label>
-      <!-- <input id="email" type="email" class="validate">
-      <label for="email">Address</label>
-      <input id="email" type="email" class="validate">
-      <label for="email">Address</label> -->
+      <input id="employerAddress" name="employerAddress" type="text" class="validate" value="{{employerAddress}}">
+      <label for="employerAddress">Address</label>
     </div>
   </div>
 </div>
+</div>
 
 <div class="containers">
+<div class="row">
+  <div class="col s12 title">
+    Employee
+  </div>
+</div>
+
+<div class="row">
   <div class="row">
-    <div class="col s12 title">
-      Employer
+    <div class="input-field col s12">
+      <i class="material-icons prefix">account_circle</i>
+      <input id="employeeName" name="employeeName" type="text" class="validate" value="{{employeeName}}">
+
+      <label for="employeeName">Name</label>
     </div>
   </div>
+  <div class="input-field col s12">
+    <i class="material-icons prefix">home</i>
+    <input id="employeeAddress" name="employeeAddress" type="text" class="validate" value="{{employeeAddress}}">
+    <label for="employeeAddress">Address</label>
+  </div>
+</div>
+</div>
 
+<div class="containers">
+<div class="row">
+  <div class="col s12 title">
+    Employer
+  </div>
+</div>
+
+<div class="row">
   <div class="row">
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons prefix">&#xE869;</i>
-        <input id="jobTitle" name="jobTitle" type="text" class="validate" value="{{jobTitle}}">
-        <label for="jobTitle">Title</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons prefix">perm_contact_calendar</i>
-        <label for="jobStartDate">Start Date</label>
-        <input id="jobStartDate" name="jobStartDate" type="date" class="datepicker" value="{{jobStartDate}}">
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons prefix">perm_contact_calendar</i>
-        <label for="jobEndDate">End Date</label>
-        <input id="jobEndDate" name="jobEndDate" type="date" class="datepicker" value="{{jobEndDate}}">
-      </div>
-    </div>
-    <div class="button">
-      <a class="waves-effect waves-light btn-large">Submit</a>
+    <div class="input-field col s12">
+      <i class="material-icons prefix">&#xE869;</i>
+      <input id="jobTitle" name="jobTitle" type="text" class="validate" value="{{jobTitle}}">
+      <label for="jobTitle">Title</label>
     </div>
   </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">perm_contact_calendar</i>
+      <label for="jobStartDate">Start Date</label>
+      <input id="jobStartDate" name="jobStartDate" type="date" class="datepicker" data-value="{{jobStartDate}}">
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">perm_contact_calendar</i>
+      <label for="jobEndDate">End Date</label>
+      <input id="jobEndDate" name="jobEndDate" type="date" class="datepicker" data-value="{{jobEndDate}}">
+    </div>
+  </div>
+  <button class="waves-effect waves-light btn-large">Submit</a>
+  <input id="jobId" name="jobId" value="{{jobId}}" type="hidden" >
+  <input id="_id" name="_id" value="{{_id}}" type="hidden" >
+  <input id="jobStatus" name="jobStatus" value="{{jobStatus}}" type="hidden" >
+  </form>
+</div>
 
 
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-  <script>
-    $('#jobStartDate').pickadate({
-      selectMonths: true, // Creates a dropdown to control month
-      selectYears: 15 // Creates a dropdown of 15 years to control year
-    });
-    $('#jobEndDate').pickadate({
-      selectMonths: true, // Creates a dropdown to control month
-      selectYears: 15 // Creates a dropdown of 15 years to control year
-    });
-  </script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script>
+  $('#jobStartDate')
+  .pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year
+    format: 'dd-mm-yyyy'
+  });
+
+  $('#jobEndDate')
+  .pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year
+    format: 'dd-mm-yyyy'
+  });
+</script>

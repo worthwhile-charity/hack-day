@@ -1,13 +1,6 @@
-const { evolve } = require('ramda');
-const moment = require('moment');
 const Job = require('../lib/job');
-
-
-const formatDate = date =>
-  moment(date).format('DD-MM-YYYY');
-
-const formatJobDates =
-  evolve({ jobStartDate: formatDate, jobEndDate: formatDate });
+const trace = require('../lib/trace');
+const { formatStringsToDates, formatDatesToStrings } = require('../lib/format_job_dates');
 
 const homeRoute = {
   method: 'GET',
@@ -22,7 +15,11 @@ const viewRoute = {
   path: '/job',
   handler(req, reply) {
     const jobId = req.url.query.id;
-    Job.findOne({ jobId }).then(job => reply.view('job', formatJobDates(job)));
+    Job
+    .findOne({ jobId })
+    .then(formatDatesToStrings)
+    .then(trace('Job data to display:'))
+    .then(job => reply.view('job', job));
   },
 };
 
@@ -31,7 +28,9 @@ const invoiceRoute = {
   path: '/invoice',
   handler(req, reply) {
     const jobId = req.url.query.id;
-    Job.findOne({ jobId }).then(job => reply.view('invoice', job));
+    Job
+    .findOne({ jobId })
+    .then(job => reply.view('invoice', job));
   },
 };
 
@@ -40,7 +39,21 @@ const contractRoute = {
   path: '/contract',
   handler(req, reply) {
     const jobId = req.url.query.id;
-    Job.findOne({ jobId }).then(job => reply.view('contract', job));
+    Job
+    .findOne({ jobId })
+    .then(job => reply.view('contract', job));
+  },
+};
+
+const updateJobRoute = {
+  method: 'POST',
+  path: '/update-job',
+  handler(req, reply) {
+    const job = formatStringsToDates(req.payload);
+    Job
+    .findOneAndUpdate({ jobId: job.jobId }, job)
+    .then(trace('Job data to save:'))
+    .then(({ jobId }) => reply.redirect(`/job?id=${jobId}`));
   },
 };
 
@@ -49,4 +62,5 @@ module.exports = [
   viewRoute,
   invoiceRoute,
   contractRoute,
+  updateJobRoute,
 ];
