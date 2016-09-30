@@ -1,5 +1,11 @@
 {{> tabs}}
 
+<!-- Start update status -->
+<div class="row" style="margin-top: 30px; display: flex; justify-content: flex-end;">
+  {{#renderJobStatusUpdate jobStatus jobId}}{{/renderJobStatusUpdate}}
+</div>
+<!-- End update status -->
+
 <form action='/update-job' method='post' >
 
 <!-- Start Employer Details Container -->
@@ -143,12 +149,13 @@
 </div>
 <!-- End Invoice Details Container -->
 
-<!-- <div class="containers"> -->
-  <div class="row" style="margin-top: 30px; display: flex; justify-content: flex-end">
-    <button class="waves-effect waves-light btn-large">Update Details</button>
-  </div>
-<!-- </div> -->
+<!-- Start issue contract button -->
+<div class="row" style="margin-top: 30px; display: flex; justify-content: flex-end;">
+  <button class="waves-effect waves-light btn-large">Update Details</button>
+</div>
+<!-- End issue contract button -->
 
 </form>
+
 
 <script src="/javascript/job.js" charset="utf-8"></script>

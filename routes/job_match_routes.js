@@ -57,10 +57,31 @@ const updateJobRoute = {
   },
 };
 
+
+const updateStatus = status => {
+  switch (status) {
+    case 'to_issue': return 'pending';
+    case 'pending': return 'completed';
+    default: return status;
+  }
+};
+
+const updateStatusRoute = {
+  method: 'POST',
+  path: '/update-status',
+  handler(req, reply) {
+    const { jobId, jobStatus } = req.payload;
+    Job
+    .findOneAndUpdate({ jobId }, { jobStatus: updateStatus(jobStatus) })
+    .then(() => reply.redirect(`/job?id=${jobId}`));
+  },
+};
+
 module.exports = [
   homeRoute,
   viewRoute,
   invoiceRoute,
   contractRoute,
   updateJobRoute,
+  updateStatusRoute,
 ];
