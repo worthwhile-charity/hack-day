@@ -6,8 +6,7 @@
   "scripts": {
     "start": "nodemon server",
     "lint": "eslint './**/*.js'",
-    "test": "NODE_ENV=testing ava --serial",
-    "precommit": "npm run lint && npm test"
+    "test": "NODE_ENV=testing ava --serial"
   },
   "repository": {
     "type": "git",
