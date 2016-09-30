@@ -1,6 +1,7 @@
 // Load any environment variables first
 require('env2')('./.env');
 const dbConnect = require('./lib/db_connect');
+
 dbConnect();
 
 const {
