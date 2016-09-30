@@ -60,8 +60,7 @@ label.active {
 
 .input-field input[type="email"],
 .input-field input[type="text"],
-.input-field input[type="email"],
-.input-field input[type="text"] {
+{
      border-bottom: 1px solid  #0075b2;
 }
 
