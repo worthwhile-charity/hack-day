@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- '6'
+notifications:
+  email: false
+cache:
+  directories:
+  - node_modules
+before_script: npm prune
+script: npm run precommit
+deploy:
+  provider: heroku
+  api_key:
+    secure: DQ2HMwR8iuibulm6fZmHAATnZCGsFI8gp5+Epu46H3bPf2gzfy7wYrCinLcNIkgKwtDMIqMAp93D+fUT9chH6GiU31E2FSCMlHjMGloDnTrFnnkC0exqO6h7Z1SVWtcnYjlxr7uyaGLfcez8FROl/Z0VHqe8TEiO4+YgaN4DBDQ9Vy75JkPlM8mbOQRXt5qP+ObxlZggKVnBQ+D3HX0xXS7wX9NFSIVQHNU/LIiZrr/zPAstmW+XYVJ8k/B7HIArm4MdZVH7xmLbOhVo+mAAAnEMQu08ec5++H9ggYN7RFjR0f6IfByBvlWSECu7gLyIZWPkM+SARzTlcurycm6ihsUTc3fsBq+NDkItsrKKHDyhfZBbWz6MtUpRo78/9IbshCUm5pAHjMWALdBRdYqAebNytaQ1UOUgyKQ2E38M3WD/IqNY6WtIToBTAENR4ygFLuKCsZJNUkF295w1HNjiGd/mWyIvgFg7psbM2cMUnSUMH90Qgx+7jqvYVWd5UZC58WJC4kLYwHDoR1EjrXgIPjbQM5cJTpdnobQYVFHSNELhVCNUJ2d6crjJnrxJNC0bRg4JtpinZrHsby4IHNoOCdzj8gwCzx8FApqhHgaAwL8jjfmbwFsRMPceoZTZ6GOZjcL+oC0bEwsrjNnJ8zxjHxU1YSrSO4HI6XqLIBySI2Q=
+  app: worthwhile-contract-manager
+  on:
+    branch: staging
