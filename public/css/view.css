@@ -42,8 +42,29 @@ label {
   color: #0075b2 !important;
 }
 
+.material-icons.prefix.active {
+  color:  #0075b2;
+}
 
-#email {
-  color: #0075b2 !important;
-  border-bottom-color: #0075b2 !important;
+label.active {
+  color:  #0075b2 !important;
+}
+
+.input-field input[type="email"]:focus,
+.input-field input[type="text"]:focus,
+.input-field input[type="email"].valid,
+.input-field input[type="text"].valid {
+     border-bottom: 1px solid  #0075b2;
+     box-shadow: 0 1px 0 0  #0075b2;
+}
+
+.input-field input[type="email"],
+.input-field input[type="text"],
+.input-field input[type="email"],
+.input-field input[type="text"] {
+     border-bottom: 1px solid  #0075b2;
+}
+
+.material-icons {
+  color: #0075b2;
 }
