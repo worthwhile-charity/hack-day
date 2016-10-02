@@ -1,3 +1,3 @@
-const jobMatchRoutes = require('./job_match_routes');
+const jobRoutes = require('./job');
 
-module.exports = [...jobMatchRoutes];
+module.exports = [...jobRoutes];
