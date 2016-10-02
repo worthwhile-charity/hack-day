@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/worthwhile-charity/hack-day.svg?branch=master)](https://travis-ci.org/worthwhile-charity/hack-day)
+
 # Worthwhile - contract and invoice management
 
 ## What
