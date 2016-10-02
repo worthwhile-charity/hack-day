@@ -59,3 +59,8 @@ tr:nth-child(odd) {
   font-size: 18px;
   font-weight: 500;
 }
+
+.tableHeaderLink {
+  color: #FFF;
+  text-decoration: underline;
+}
