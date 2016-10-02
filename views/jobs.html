@@ -1,21 +1,21 @@
 <a class='dropdown-button btn' href='#' data-activates='dropdown1' id='filter_by'>Filter By</a>
       <ul id='dropdown1' class='dropdown-content'>
         <li><a href="/">All</a></li>
-        <li><a href="/?filterStatus=to_issue">To issue</a></li>
-        <li><a href="/?filterStatus=pending">Pending</a></li>
-        <li><a href="/?filterStatus=completed">Completed</a></li>
+        <li><a href="/?filterJobStatus=to_issue&sortBy={{sortBy}}&sortDirection={{sortDirection}}">To issue</a></li>
+        <li><a href="/?filterJobStatus=pending&sortBy={{sortBy}}&sortDirection={{sortDirection}}">Pending</a></li>
+        <li><a href="/?filterJobStatus=completed&sortBy={{sortBy}}&sortDirection={{sortDirection}}">Completed</a></li>
       </ul>
 
 <table id='table'>
     <tr>
-      <th>Employer</th>
-      <th>Candidate</th>
-      <th>Start Date</th>
+      <th><a href="{{#renderSortLink sortBy filterJobStatus 'employerName' sortDirection }}{{/renderSortLink}}" class="tableHeaderLink">Employer</a></th>
+      <th><a href="{{#renderSortLink sortBy filterJobStatus 'employeeName' sortDirection }}{{/renderSortLink}}" class="tableHeaderLink">Candidate</a></th>
+      <th><a href="{{#renderSortLink sortBy filterJobStatus 'jobStartDate' sortDirection }}{{/renderSortLink}}" class="tableHeaderLink">Job Start Date</a></th>
       <th>Status</th>
       <th></th>
     </tr>
 
-    {{#each items}}
+    {{#each jobs}}
     <tr>
       <td>{{this.employerName}}</td>
       <td>{{this.employeeName}}</td>
