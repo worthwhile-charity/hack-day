@@ -8,7 +8,8 @@
 .containers {
   background-color: #FAFAFA;
   width: 100%;
-  max-width: 780px;
+  max-width: 1200px;
+  min-width: 600px;
   margin: 0 auto;
   margin-top: 40px;
   padding: 55px;

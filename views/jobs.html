@@ -1,16 +1,16 @@
 <a class='dropdown-button btn' href='#' data-activates='dropdown1' id='filter_by'>Filter By</a>
       <ul id='dropdown1' class='dropdown-content'>
-        <li><a href="#!">In Progress</a></li>
-        <li><a href="#!">To Be Issued</a></li>
-        <li><a href="#!">Rejected</a></li>
-        <li><a href="#!">Undecided</a></li>
+        <li><a href="/">All</a></li>
+        <li><a href="/?filterStatus=to_issue">To issue</a></li>
+        <li><a href="/?filterStatus=pending">Pending</a></li>
+        <li><a href="/?filterStatus=completed">Completed</a></li>
       </ul>
 
 <table id='table'>
     <tr>
       <th>Employer</th>
       <th>Candidate</th>
-      <th>Date</th>
+      <th>Start Date</th>
       <th>Status</th>
       <th></th>
     </tr>
@@ -19,7 +19,7 @@
     <tr>
       <td>{{this.employerName}}</td>
       <td>{{this.employeeName}}</td>
-      <td>28-09-2017</td>
+      <td>{{this.jobStartDate}}</td>
       <td>{{#ifJobStatus this.jobStatus}}{{/ifJobStatus}}</td>
       <td><a class="waves-effect waves-light btn view" href='/job?id={{this.jobId}}'>VIEW</a></td>
           {{/each}}
